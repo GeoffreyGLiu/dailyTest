@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/modules/BaseModule" />
             <option value="$PROJECT_DIR$/modules/ContentProviderTest" />
             <option value="$PROJECT_DIR$/modules/Dagger2Retrofit" />
+            <option value="$PROJECT_DIR$/modules/GitTest" />
             <option value="$PROJECT_DIR$/modules/GradleTest" />
             <option value="$PROJECT_DIR$/modules/HybridTest" />
             <option value="$PROJECT_DIR$/modules/IOStream" />
