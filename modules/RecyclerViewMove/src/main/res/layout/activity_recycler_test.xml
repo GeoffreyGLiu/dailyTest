@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <Button
+        android:id="@+id/btn_move_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="滑动"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_decoration_test"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_decoration_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="item装饰"
+        app:layout_constraintLeft_toRightOf="@+id/btn_move_test"
+        app:layout_constraintRight_toLeftOf="@+id/btn_sticky_head"
+        app:layout_constraintTop_toTopOf="@+id/btn_move_test" />
+
+    <Button
+        android:id="@+id/btn_sticky_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="粘性头部"
+        app:layout_constraintLeft_toRightOf="@+id/btn_decoration_test"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_move_test" />
+
+    <Button
+        android:id="@+id/btn_flipper_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Flipper"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_empty_one"
+        app:layout_constraintTop_toBottomOf="@+id/btn_move_test" />
+
+    <Button
+        android:id="@+id/btn_empty_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预留1"
+        app:layout_constraintLeft_toRightOf="@+id/btn_flipper_test"
+        app:layout_constraintRight_toLeftOf="@+id/btn_empty_two"
+        app:layout_constraintTop_toTopOf="@+id/btn_flipper_test" />
+
+    <Button
+        android:id="@+id/btn_empty_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预留2"
+        app:layout_constraintLeft_toRightOf="@+id/btn_empty_one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_flipper_test" />
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_flipper_test" />
+</androidx.constraintlayout.widget.ConstraintLayout>

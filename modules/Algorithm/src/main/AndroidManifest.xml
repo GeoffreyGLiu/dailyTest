@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geoffrey.algorithm">
+
+    <application>
+        <activity android:name=".AlgorithmActivity"/>
+    </application>
+</manifest>

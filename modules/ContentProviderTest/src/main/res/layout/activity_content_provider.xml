@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/cp_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cp_insert"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#554369dd"
+        android:gravity="center"
+        android:text="insert"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/cp_et" />
+
+    <TextView
+        android:id="@+id/cp_update"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#554369dd"
+        android:gravity="center"
+        android:text="update"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/cp_insert" />
+
+    <TextView
+        android:id="@+id/cp_delete"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#554369dd"
+        android:gravity="center"
+        android:text="delete"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/cp_update" />
+
+    <TextView
+        android:id="@+id/cp_query"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#554369dd"
+        android:gravity="center"
+        android:text="query"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/cp_delete" />
+
+    <TextView
+        android:id="@+id/cp_contact"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#554369dd"
+        android:gravity="center"
+        android:text="contact from phone"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/cp_query" />
+
+
+    <TextView
+        android:id="@+id/cp_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cp_contact" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

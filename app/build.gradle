@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.geoffrey.test"
+        minSdkVersion 29
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "channel"
+
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    greendao {
+        schemaVersion 1 //当前数据库版本
+    }
+
+//    productFlavors {
+//
+//        ntest {
+//            dimension "channel"
+//            buildConfigField "String", "FLAVOR_NAME", "\"TestDemo\""
+//
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation project(path: ':modules:AIDLTest')
+    implementation project(path: ':modules:GradleTest')
+    implementation project(path: ':modules:Algorithm')
+    implementation project(path: ':modules:BaseModule')
+    implementation project(path: ':modules:Dagger2Retrofit')
+    implementation project(path: ':modules:HybridTest')
+    implementation project(path: ':modules:ContentProviderTest')
+    implementation project(path: ':modules:IOStream')
+    implementation project(path: ':modules:RecyclerViewMove')
+    implementation project(path: ':modules:StorageDirectoryTest')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}
+//this.getProjectApp()
+
+def getProjectApp() {
+    println '-----------AppProject Start-----------------'
+    def projectSetApp = this.rootProject.getAllprojects()
+
+    projectSetApp.eachWithIndex { Project entry, int i ->
+        if (i == 0) {
+            println "RootProject:'$entry.name'"
+        } else if (i > 0) {
+            println "+----------Project:'$entry.name'"
+        } else {
+            println '-----------AppProject End-----------------'
+        }
+    }
+
+}
+
+//this.getSubProjectApp()
+
+def getSubProjectApp() {
+
+    println '------------SubProject in App-------------'
+    def subProjectSetApp = this.rootProject.getSubprojects();
+    subProjectSetApp.eachWithIndex { Project entry, int i ->
+        if (i >= 0) {
+            println "+-----------SubProject:'$entry.name''$i'"
+        }
+    }
+}
+
+//this.getParentNameFromApp()
+
+def getParentNameFromApp() {
+    println '-------Parent Name in App---------'
+    def name = 'parent 为 null'
+    def parent = this.getParent()
+    if (parent != null) {
+        name = parent.name
+    }
+    println "ParentName = '$name'"
+}
+
+//def startBuildTime,endBuildTime
+//
+//this.afterEvaluate { Project project ->
+//
+//    def preBuildTask = project.tasks.getByName("preBuild")
+//    def buildTask = project.tasks.getByName("build")
+//
+//    preBuildTask.doFirst {
+//        startBuildTime = System.currentTimeMillis();
+//        println "build start ,current time is $startBuildTime"
+//    }
+//    buildTask.doLast {
+//        endBuildTime = System.currentTimeMillis()
+//        println "build end,current time is $endBuildTime"
+//        println "this build took ${(endBuildTime - startBuildTime)/1000} seconds"
+//    }
+//}
+

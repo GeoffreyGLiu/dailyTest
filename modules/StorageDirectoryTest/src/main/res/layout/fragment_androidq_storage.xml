@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_absolutepath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绝对路径保存读取"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_absolute_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="绝对路径保存"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_absolute_read"
+        app:layout_constraintTop_toBottomOf="@+id/tv_absolutepath" />
+
+    <Button
+        android:id="@+id/btn_absolute_read"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="绝对路径读取"
+        app:layout_constraintLeft_toRightOf="@+id/btn_absolute_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_absolute_save" />
+
+    <TextView
+        android:id="@+id/tv_relativepath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="相对路径保存读取"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_absolute_save" />
+
+    <Button
+        android:id="@+id/btn_relative_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="相对路径保存"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_relative_read"
+        app:layout_constraintTop_toBottomOf="@+id/tv_relativepath" />
+
+    <Button
+        android:id="@+id/btn_relative_read"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="相对路径读取"
+        app:layout_constraintLeft_toRightOf="@+id/btn_relative_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_relative_save" />
+
+    <TextView
+        android:id="@+id/tv_path_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_relative_save" />
+
+    <ImageView
+        android:id="@+id/iv_path_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_path_show" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title> Carson</title>
+    </head>
+    <script>
+
+            function callAndroid(){
+                //由于对象映射, 这里调用test对象等于调用android映射的对象
+                document.location = "js://webview?arg1=111&arg2=222"
+                test.hello("JS调用了android中的hello方法");
+            }
+
+            function getResult(result){
+                alert("result = " + result)
+                return "获取android方法result"
+            }
+
+        </script>
+    <body>
+        <button type="button" id="button1" onclick="callAndroid()">点击按钮调用callAndroid方法</button>
+    </body>
+</html>
+
+<!--<!DOCTYPE html>
+    <html>
+
+        <head>
+            <meta charset="UTF-8">
+            <title></title>
+        </head>
+
+        <body>
+            <br/>
+
+               <a href="uxinlive://selectImageToPublish?group_id=249&group_name=AB&groupActivityId=34">打开app</a>
+            <br/>
+
+    </html>-->

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_main"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+
+        <TextView
+            android:id="@+id/tv_choose_list"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="集合选中"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notification" />
+
+        <TextView
+            android:id="@+id/tv_dao"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="greenDao"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_choose_list" />
+
+        <TextView
+            android:id="@+id/tv_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="fragment"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dao" />
+
+        <TextView
+            android:id="@+id/tv_aidl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="aidl"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fragment" />
+
+        <TextView
+            android:id="@+id/tv_algorithm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="algorithm"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_aidl" />
+
+        <TextView
+            android:id="@+id/tv_hybrid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="hybrid"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_algorithm" />
+
+        <TextView
+            android:id="@+id/tv_hybrid_call"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="hybrid_call"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hybrid" />
+
+
+        <TextView
+            android:id="@+id/tv_retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="retrofit"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hybrid_call" />
+
+        <TextView
+            android:id="@+id/tv_content_provider"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="ContentProvider"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_retrofit" />
+        
+        <TextView
+            android:id="@+id/tv_io_stream"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="IOStream"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content_provider" />
+       <TextView
+            android:id="@+id/tv_recycler_move"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="RecyclerMove"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_io_stream" />
+        <TextView
+            android:id="@+id/tv_storage_directory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="Storage"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_io_stream" />
+
+        <TextView
+            android:id="@+id/show_stub"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="show stub"
+            android:textColor="#FFFFFF"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/hide_stub"
+            app:layout_constraintTop_toBottomOf="@+id/tv_storage_directory" />
+
+        <TextView
+            android:id="@+id/hide_stub"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="hide stub"
+            android:textColor="#FFFFFF"
+            app:layout_constraintLeft_toRightOf="@+id/show_stub"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/show_stub" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:text="可用内存"
+            android:textColor="#ffffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_stub"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_progress="0"
+            app:lottie_rawRes="@raw/group_lottie_join" />
+
+        <TextView
+            android:id="@+id/tv_lav_reset"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="重置"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lav" />
+
+        <ViewStub
+            android:id="@+id/view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inflatedId="@id/cl_stub"
+            android:layout="@layout/view_stub"
+            app:layout_constraintTop_toBottomOf="@+id/show_stub" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lav_reset" />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorAccent"
+            android:hint="输入框"
+            app:layout_constraintTop_toBottomOf="@+id/rv_list"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

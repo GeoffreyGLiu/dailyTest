@@ -1,0 +1,109 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2' }
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.0"
+        classpath "org.greenrobot:greendao-gradle-plugin:3.3.0"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
+        maven { url "https://jitpack.io" }
+        version '2.0.1'
+    }
+}
+
+//project('app'){
+//    Project project -> version '2.0.0'
+//}
+
+this.getAllProjectsTest()
+
+def getAllProjectsTest() {
+    println '-----------RootProject Start-----------------'
+
+    def projectSet = this.getAllprojects();
+    projectSet.eachWithIndex { Project entry, int i ->
+        if (i == 0) {
+            println "RootProject:'$entry.name'"
+        } else if (i > 0) {
+            println "+-----Project:'$entry.name'"
+
+        } else {
+            println "------RootProject Finish-------"
+        }
+    }
+}
+//this.getVersionInfo()
+def getVersionInfo() {
+
+    def projectSet = this.getSubprojects();
+    projectSet.eachWithIndex { Project entry, int i ->
+        if (i == 0) {
+            println "VersinInfo in App = '$entry.version'"
+        }
+    }
+}
+
+//println getFileContent('gradle.properties')
+//println file(getRootDir().absolutePath + "/app/build.gradle").text
+
+def getFileContent(String path) {
+    println ''
+    try {
+        def file = file(path)
+        return file.text
+    } catch (GradleException e) {
+        println "File $path not found"
+    }
+    return null
+}
+
+//copy {
+//
+//    from file(getRootDir().absolutePath + "/app/src/main/res/layout")
+//    into getRootDir().path + '/testCopy'
+//    include '*.xml'
+//    exclude {
+//        FileTreeElement detail -> detail.file.name.contains("activity")
+//    }
+//}
+
+//fileTree("app/src/main/java") {
+//    FileTree fileTree ->
+//        fileTree.visit {
+//            FileTreeElement element ->
+//                println element.file.name
+//        }
+//}
+
+//task getDateTask(group: 'build', description: 'date test') {
+//    println new Date().dateString
+//    doFirst {println "group1 is $group"}
+//    doFirst {println "group2 is $group"}
+//    doLast {println "description is $description"}
+//}
+//this.tasks.create(name: 'getDateTask2', group: 'build', description: 'date test') {
+//    println "getDateTask2 date: ${new Date().dateString}"
+//}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

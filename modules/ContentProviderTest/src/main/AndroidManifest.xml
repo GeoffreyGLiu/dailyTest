@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geoffrey.contentprovidertest">
+
+    <application>
+        <activity android:name=".ContentProviderActivity" />
+        <provider
+            android:authorities="com.geoffrey.contentprovider"
+            android:name=".MyContentProvider"/>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+</manifest>

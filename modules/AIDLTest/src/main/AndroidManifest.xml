@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geoffrey.aidltest">
+
+    <application>
+        <activity android:name=".activity.AIDLActivity"/>
+        <service android:name=".BookManagerService" />
+    </application>
+
+</manifest>

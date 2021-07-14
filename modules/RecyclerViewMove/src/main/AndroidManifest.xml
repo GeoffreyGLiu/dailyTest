@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geoffrey.otherstest">
+
+    <application>
+        <activity android:name="com.geoffrey.recyclerview.RecyclerTestActivity"/>
+    </application>
+</manifest>

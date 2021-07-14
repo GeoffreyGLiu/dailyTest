@@ -1,0 +1,141 @@
+-----------RootProject Start-----------------
+RootProject:'Test'
++-----Project:'app'
++-----Project:'GradleTestOne'
+VersinInfo in App = '2.0.1'
+
+# Project-wide Gradle settings.
+# IDE (e.g. Android Studio) users:
+# Gradle settings configured through the IDE *will override*
+# any settings specified in this file.
+# For more details on how to configure your build environment visit
+# http://www.gradle.org/docs/current/userguide/build_environment.html
+# Specifies the JVM arguments used for the daemon process.
+# The setting is particularly useful for tweaking memory settings.
+org.gradle.jvmargs=-Xmx2048m
+# When configured, Gradle will run in incubating parallel mode.
+# This option should only be used with decoupled projects. More details, visit
+# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+# org.gradle.parallel=true
+# AndroidX package structure to make it clearer which packages are bundled with the
+# Android operating system, and which are packaged with your app"s APK
+# https://developer.android.com/topic/libraries/support-library/androidx-rn
+android.useAndroidX=true
+# Automatically convert third-party libraries to use AndroidX
+android.enableJetifier=true
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.geoffrey.test"
+        minSdkVersion 29
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "channel"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+
+        ntest {
+            dimension "channel"
+            buildConfigField "String", "FLAVOR_NAME", "\"TestDemo\""
+
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}
+this.getProjectApp()
+
+def getProjectApp() {
+    println '-----------AppProject Start-----------------'
+    def projectSetApp = this.rootProject.getAllprojects()
+
+    projectSetApp.eachWithIndex { Project entry, int i ->
+        if (i == 0) {
+            println "RootProject:'$entry.name'"
+        } else if (i > 0) {
+            println "+----------Project:'$entry.name'"
+        } else {
+            println '-----------AppProject End-----------------'
+        }
+    }
+
+}
+
+this.getSubProjectApp()
+
+def getSubProjectApp() {
+
+    println '------------SubProject in App-------------'
+    def subProjectSetApp = this.rootProject.getSubprojects();
+    subProjectSetApp.eachWithIndex { Project entry, int i ->
+        if (i >= 0) {
+            println "+-----------SubProject:'$entry.name''$i'"
+        }
+    }
+}
+
+this.getParentNameFromApp()
+
+def getParentNameFromApp() {
+    println '-------Parent Name in App---------'
+    def name = 'parent 为 null'
+    def parent = this.getParent()
+    if (parent != null) {
+        name = parent.name
+    }
+    println "ParentName = '$name'"
+}
+
+-----------AppProject Start-----------------
+RootProject:'Test'
++----------Project:'app'
++----------Project:'GradleTestOne'
+------------SubProject in App-------------
++-----------SubProject:'app''0'
++-----------SubProject:'GradleTestOne''1'
+-------Parent Name in App---------
+ParentName = 'Test'
+
+Welcome to Gradle 6.1.1.
+
+To run a build, run gradlew <task> ...
+
+To see a list of available tasks, run gradlew tasks
+
+To see a list of command-line options, run gradlew --help
+
+To see more detail about a task, run gradlew help --task <task>
+
+For troubleshooting, visit https://help.gradle.org

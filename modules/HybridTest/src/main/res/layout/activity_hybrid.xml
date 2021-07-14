@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <WebView
+        android:id="@+id/wv_hybrid_one"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_hybrid_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="点击调用"
+        app:layout_constraintTop_toBottomOf="@+id/wv_hybrid_one" />
+
+    <Button
+        android:id="@+id/btn_hybrid_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="JS获取Android方法结果"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hybrid_one" />
+
+    <Button
+        android:id="@+id/btn_hybrid_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="打开JS的prompt对话框"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hybrid_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

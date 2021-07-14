@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/et_create_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_edit_input"
+        android:hint="输入创建文件的名称"
+        android:minHeight="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_create_file"
+        android:text="创建文件"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_create_file" />
+
+    <EditText
+        android:id="@+id/et_write_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_edit_input"
+        android:hint="输入写入文件内容"
+        android:minHeight="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_file" />
+
+    <Button
+        android:id="@+id/btn_write_file"
+        android:text="写入文件"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_write_file" />
+
+    <TextView
+        android:id="@+id/tv_show_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_write_file" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geoffrey.hybridtest">
+
+
+    <application
+        android:hardwareAccelerated="true">
+        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".HybridActivity">
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

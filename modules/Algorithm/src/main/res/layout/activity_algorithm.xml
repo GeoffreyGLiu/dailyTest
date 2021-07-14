@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#6622ffff"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_palindrome"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="查询回文字符串"
+            app:layout_constraintTop_toBottomOf="@+id/et_input" />
+
+        <TextView
+            android:id="@+id/tv_mergearray"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="合并两个有序数组"
+            app:layout_constraintTop_toBottomOf="@+id/tv_palindrome" />
+
+        <TextView
+            android:id="@+id/tv_findlongest"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="找出最长字符串"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mergearray" />
+        <TextView
+            android:id="@+id/tv_findkth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="找出第k大的数字"
+            app:layout_constraintTop_toBottomOf="@+id/tv_findlongest" />
+
+        <TextView
+            android:id="@+id/tv_eraseinterval"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="找出不重复区间"
+            app:layout_constraintTop_toBottomOf="@+id/tv_findkth" />
+
+        <TextView
+            android:id="@+id/tv_arrowshot"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="最小投飞镖次数"
+            app:layout_constraintTop_toBottomOf="@+id/tv_eraseinterval" />
+        <TextView
+            android:id="@+id/tv_charreset"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="同种字符出现在一起"
+            app:layout_constraintTop_toBottomOf="@+id/tv_arrowshot" />
+        <TextView
+            android:id="@+id/tv_subsequence"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="是否为子序列"
+            app:layout_constraintTop_toBottomOf="@+id/tv_charreset" />
+
+        <TextView
+            android:id="@+id/tv_show"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subsequence"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
